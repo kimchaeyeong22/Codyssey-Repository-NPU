@@ -68,6 +68,11 @@ MAC(A,B)=\sum_{i=0}^{N-1}\sum_{j=0}^{N-1} A_{ij}\times B_{ij}
 
 이러한 방식으로 입력 패턴과 각 필터의 유사도를 점수로 비교합니다.
 
+<img width="1441" height="1420" alt="MAC 연산 구현" src="https://github.com/user-attachments/assets/af9bdf9f-8ddc-41a9-baf7-75ad3025249d" />
+<img width="743" height="808" alt="MAC 연산 구현 2" src="https://github.com/user-attachments/assets/d252b845-7ff7-4c9c-a668-248d137bca16" />
+
+
+
 ### 4-2. 필터 비교 및 분류
 
 두 필터의 MAC 점수를 각각 계산한 후 더 높은 점수를 가진 필터를 선택합니다.
