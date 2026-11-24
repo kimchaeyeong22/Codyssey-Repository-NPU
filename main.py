@@ -58,6 +58,26 @@ def normalize_label(label):
 
     return label
 
+def normalize_filter_keys(filters):
+    normalized_filters = {}
+
+    for size_key, filter_data in filters.items():
+        normalized_data = {}
+
+        for key, matrix in filter_data.items():
+            normalized_key = normalize_label(key)
+
+            if normalized_key in normalized_data:
+                raise ValueError(
+                    f"중복된 필터 키가 있습니다: {normalized_key}"
+                )
+
+            normalized_data[normalized_key] = matrix
+
+        normalized_filters[size_key] = normalized_data
+
+    return normalized_filters
+
 def test_json_patterns(data):
     print("\n===== JSON 자동 테스트 =====")
 
@@ -78,8 +98,8 @@ def test_json_patterns(data):
 
         filters = data["filters"][f"size_{size}"]
 
-        score_cross = mac(pattern, filters["cross"])
-        score_x = mac(pattern, filters["x"])
+        score_cross = mac(pattern, filters["Cross"])
+        score_x = mac(pattern, filters["X"])
 
         if abs(score_cross - score_x) < epsilon:
             predicted = "UNDECIDED"
@@ -157,6 +177,8 @@ x_filter = [
 
 with open("data.json", "r", encoding="utf-8") as file:
     data = json.load(file)
+
+data["filters"] = normalize_filter_keys(data["filters"])
 
 def validate_matrix(matrix, size):
     # 행렬의 전체 행 개수 확인
@@ -259,13 +281,21 @@ pattern = input_matrix("패턴")
 
 
 # 4. MAC 연산
+start_time = time.perf_counter()
+
 score_a = mac(pattern, filter_a)
 score_b = mac(pattern, filter_b)
+
+end_time = time.perf_counter()
+
+elapsed_time = (end_time - start_time) * 1000
+
 
 # 5. 결과 판정
 print("\n===== MAC 연산 결과 =====")
 print("A 점수:", score_a)
 print("B 점수:", score_b)
+print(f"연산 시간: {elapsed_time:.6f} ms")
 
 # 6. 결과 출력
 epsilon = 1e-9
