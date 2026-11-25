@@ -16,7 +16,7 @@ def mac(pattern, filter_data):
     return score
 
 
-def measure_performance(size, repeat=100000, trials=5):
+def measure_performance(size, repeat=100000, trials=10):
     pattern = [[1 for _ in range(size)] for _ in range(size)]
     filter_data = [[1 for _ in range(size)] for _ in range(size)]
 
