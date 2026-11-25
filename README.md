@@ -68,7 +68,8 @@ MAC(A,B)=\sum_{i=0}^{N-1}\sum_{j=0}^{N-1} A_{ij}\times B_{ij}
 
 더 쉽게 정리하자면 다음과 같습니다.
 
-|<img width="606" height="248" alt="11월 25일 쉽게 이해하기" src="https://github.com/user-attachments/assets/f98b1b4c-03d2-4c6a-aeec-025c56632162" />|<img width="614" height="252" alt="11월 25일 쉽게 이해하기 2" src="https://github.com/user-attachments/assets/c1681d16-762f-470b-ae55-90c64b334d95" />|
+<img width="606" height="248" alt="11월 25일 쉽게 이해하기" src="https://github.com/user-attachments/assets/f98b1b4c-03d2-4c6a-aeec-025c56632162" />
+<img width="614" height="252" alt="11월 25일 쉽게 이해하기 2" src="https://github.com/user-attachments/assets/c1681d16-762f-470b-ae55-90c64b334d95" />
 <img width="602" height="202" alt="11월 25일 쉽게 이해하기 3" src="https://github.com/user-attachments/assets/e4231049-434d-43ec-ba13-a7cd48242b5c" />
 
 
