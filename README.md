@@ -391,6 +391,9 @@ JSON에 저장된 모든 패턴을 순서대로 불러와 자동으로 테스트
 6. 정답 라벨과 비교합니다.
 7. PASS 또는 FAIL 결과를 출력합니다.
 
+<img width="1546" height="2044" alt="JSON 파일을 이용한 자동 테스트" src="https://github.com/user-attachments/assets/c21bcb5c-8eb3-4030-8f9c-ff6c58269c96" />
+<img width="1126" height="857" alt="JSON 파일을 이용한 자동 테스트 2" src="https://github.com/user-attachments/assets/5a400d48-226a-4298-9350-4f933e83e06a" />
+
 마지막에는 전체 테스트 개수, 통과 개수, 실패 개수, 통과율을 출력합니다.
 
 ### 5-8. MAC 성능 측정
