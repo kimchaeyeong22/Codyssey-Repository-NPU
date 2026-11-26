@@ -403,10 +403,19 @@ JSON에 저장된 모든 패턴을 순서대로 불러와 자동으로 테스트
 측정 조건은 다음과 같습니다.
 
 - 행렬 크기: 3×3, 5×5, 13×13, 25×25
-- 반복 횟수: 100,000회
+- 반복 횟수: 10,000회
 - 측정 횟수: 5회
 - 측정 함수: `time.perf_counter()`
 - 최종 결과: 5회 실행 시간의 평균
+
+ <img width="1675" height="2086" alt="10000회 반복 측정" src="https://github.com/user-attachments/assets/918673f2-a416-47d2-b4e4-fd7ec41b0bfb" />
+ <img width="707" height="1019" alt="10000회 반복 측정 2" src="https://github.com/user-attachments/assets/96d457c2-41e3-45cd-b9a1-1a545ea882bf" />
+ <img width="731" height="1020" alt="10000회 반복 측정 3" src="https://github.com/user-attachments/assets/ed3a7485-835f-4a04-adf3-fa23918218a8" />
+ <img width="1594" height="1822" alt="10000회 반복 측정 4" src="https://github.com/user-attachments/assets/9f3ef96c-c690-4aba-94d1-abe1f1c0d40c" />
+
+
+
+
 
 이를 통해 행렬 크기가 증가할 때 연산량과 실행 시간이 어떻게 변하는지 확인합니다.
 
